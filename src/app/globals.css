@@ -4,7 +4,7 @@
 
 
 :root{
-   --primary-btn: #FF71A4;
+   --clr-primary-btn: #FF71A4;
    --clr-white-100: #FFFFFF;
    --clr-gray: #E5EDFF;
    --clr-blue-900: #121C51;
@@ -16,6 +16,10 @@
 }
 
 
+
+.main-shadow{
+  box-shadow: 0.825rem 0.625rem var(--clr-gray);
+}
 
 body{
   @apply bg-gray;

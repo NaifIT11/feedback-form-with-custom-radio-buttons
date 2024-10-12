@@ -11,7 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: "var(--clr-primary-btn)",
-        white: "var(--clr-white)",
+        white: "var(--clr-white-100)",
         red: "var(--clr-red)",
         gray: "var(--clr-gray)",
         "blue-300": "var(--clr-blue-300)",

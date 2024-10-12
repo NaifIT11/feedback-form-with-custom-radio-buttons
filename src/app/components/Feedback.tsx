@@ -7,8 +7,6 @@ import { Annoyed, Frown, Laugh, Meh, Smile } from "lucide-react";
 
 export default function Feedback() {
   const [selectedValue, setSelectedValue] = useState("");
-  
-  console.log(selectedValue)
 
   const radioItemsValues = [
     {
@@ -39,7 +37,7 @@ export default function Feedback() {
     })
   }
   return (
-    <div className="w-3/4 md:w-1/2 rounded-sm p-6 bg-white-200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <div className="w-3/4 main-shadow md:w-1/2 rounded-sm p-6 bg-white-200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       <div className="space-y-4">
         <h1 className="text-xl text-blue-900 font-semibold">Give Feedback</h1>
         <p className="text-base text-blue-900 font-medium">
@@ -70,7 +68,7 @@ export default function Feedback() {
           ))}
         </RadioGroup>
         <div className="self-end">
-            <button type="submit" className="px-4 py-2 rounded font-medium text-white bg-primary">Submit</button>
+            <button type="submit" className="px-4 py-2 rounded font-medium text-white bg-blue-900">submit</button>
         </div>
       </form>
     </div>
