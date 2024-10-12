@@ -1,3 +1,4 @@
+import { builtinModules } from "module";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -9,8 +10,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "var(--clr-blue-300)",
+        primary: "var(--clr-primary-btn)",
+        white: "var(--clr-white)",
+        red: "var(--clr-red)",
+        gray: "var(--clr-gray)",
+        "blue-300": "var(--clr-blue-300)",
+        "blue-600": "var(--clr-blue-600)",
+        "blue-900": "var(--clr-blue-900)",
+        "white-200": "var(--clr-white-200)",
+        "white-400": "var(--clr-white-400)"
       },
     },
   },
