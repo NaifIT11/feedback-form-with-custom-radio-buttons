@@ -44,18 +44,19 @@ export default function Feedback() {
       <form className="mt-4 flex flex-col gap-4">
         <RadioGroup 
           value={selectedValue} 
-          onValueChange={setSelectedValue} // Update the state on value change
+          onValueChange={setSelectedValue} 
           className="flex gap-2 justify-between"
         >
           {radioItemsValues.map((ri) => (
             <RadioGroupItem 
-              key={ri.value} // Use a key for mapping
+              key={ri.value}
               value={ri.value}
-              id={ri.value} // Set an id for accessibility
+              id={ri.value}
+              data-checked={selectedValue === ri.value}
             >
-              <div className="flex flex-col items-center gap-2 p-2 rounded bg-white border border-blue-300">
+              <div data-checked={selectedValue === ri.value} className="flex data-[checked=true]:border-blue-600 flex-col items-center gap-2 p-2 rounded bg-white border border-blue-300">
                 {ri.SVG}
-                <div role="heading" className="text-sm">
+                <div role="heading" className="text-sm text-blue-300 data-[checked=true]:text-blue-600" data-checked={selectedValue === ri.value}>
                   {ri.value}
                 </div>
               </div>
