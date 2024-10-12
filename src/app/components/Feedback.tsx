@@ -1,3 +1,5 @@
+"use client"
+
 import { RadioGroup, RadioGroupItem } from "@radix-ui/react-radio-group";
 import { Annoyed, Frown, Laugh, Meh, Smile } from "lucide-react";
 
