@@ -67,7 +67,7 @@ export default function Feedback() {
                 {ri.SVG}
                 <div
                   role="heading"
-                  aria-level="5"
+                  aria-level={5}
                   className="text-sm text-blue-300 data-[checked=true]:text-blue-600"
                   data-checked={selectedValue === ri.value}
                 >
