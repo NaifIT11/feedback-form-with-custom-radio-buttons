@@ -60,7 +60,7 @@ export default function Feedback() {
             >
               <div data-checked={selectedValue === ri.value} className="flex data-[checked=true]:border-blue-600 flex-col items-center gap-2 p-2 rounded bg-white border border-blue-300">
                 {ri.SVG}
-                <div role="heading" className="text-sm text-blue-300 data-[checked=true]:text-blue-600" data-checked={selectedValue === ri.value}>
+                <div role="heading" aria-level="5" className="text-sm text-blue-300 data-[checked=true]:text-blue-600" data-checked={selectedValue === ri.value}>
                   {ri.value}
                 </div>
               </div>
