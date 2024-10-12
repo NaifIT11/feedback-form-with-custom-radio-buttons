@@ -1,7 +1,7 @@
 "use client"
 
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { RadioGroup, RadioGroupItem } from "@radix-ui/react-radio-group";
 import { Annoyed, Frown, Laugh, Meh, Smile } from "lucide-react";
 
@@ -32,7 +32,12 @@ export default function Feedback() {
       SVG: <Annoyed className="w-8 h-8 text-blue-300" />,
     },
   ];
-
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
+    e.preventDefault();
+    console.log({
+        feedback: selectedValue
+    })
+  }
   return (
     <div className="w-3/4 md:w-1/2 rounded-sm p-6 bg-white-200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       <div className="space-y-4">
@@ -41,7 +46,7 @@ export default function Feedback() {
           What do you think of the issue search experience within Jira projects?
         </p>
       </div>
-      <form className="mt-4 flex flex-col gap-4">
+      <form className="mt-4 flex flex-col gap-4" onSubmit={handleSubmit}>
         <RadioGroup 
           value={selectedValue} 
           onValueChange={setSelectedValue} 
@@ -64,6 +69,9 @@ export default function Feedback() {
             </RadioGroupItem>
           ))}
         </RadioGroup>
+        <div className="self-end">
+            <button type="submit" className="px-4 py-2 rounded font-medium text-white bg-primary">Submit</button>
+        </div>
       </form>
     </div>
   );
