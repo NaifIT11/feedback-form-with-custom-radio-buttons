@@ -45,7 +45,7 @@ export default function Feedback() {
         <RadioGroup 
           value={selectedValue} 
           onValueChange={setSelectedValue} 
-          className="flex gap-2 justify-between"
+          className="flex gap-2"
         >
           {radioItemsValues.map((ri) => (
             <RadioGroupItem 
@@ -53,6 +53,7 @@ export default function Feedback() {
               value={ri.value}
               id={ri.value}
               data-checked={selectedValue === ri.value}
+              className="w-full"
             >
               <div data-checked={selectedValue === ri.value} className="flex data-[checked=true]:border-blue-600 flex-col items-center gap-2 p-2 rounded bg-white border border-blue-300">
                 {ri.SVG}
