@@ -10,7 +10,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--clr-blue-300)",
         primary: "var(--clr-primary-btn)",
         white: "var(--clr-white)",
         red: "var(--clr-red)",
